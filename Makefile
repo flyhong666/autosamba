@@ -53,17 +53,17 @@ endef
 
 define Package/autosamba/install
 	$(INSTALL_DIR) $(1)/etc/hotplug.d/block
-	$(INSTALL_BIN) ./files/20-smb $(1)/etc/hotplug.d/block/20-samba
+	$(INSTALL_BIN) ./files/20-samba $(1)/etc/hotplug.d/block/20-samba
 endef
 
 define Package/autosamba/install
 	$(INSTALL_DIR) $(1)/etc/hotplug.d/block
-	$(INSTALL_BIN) ./files/20-smb $(1)/etc/hotplug.d/block/20-smb-ksmbd
+	$(INSTALL_BIN) ./files/20-smb-ksmbd $(1)/etc/hotplug.d/block/20-smb-ksmbd
 endef
 
 define Package/autosamba/install
 	$(INSTALL_DIR) $(1)/etc/hotplug.d/block
-	$(INSTALL_BIN) ./files/20-smb $(1)/etc/hotplug.d/block/20-samba4
+	$(INSTALL_BIN) ./files/20-samba4 $(1)/etc/hotplug.d/block/20-samba4
 endef
 
 $(eval $(call BuildPackage,autosamba))
